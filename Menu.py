@@ -43,82 +43,81 @@ personality={'Normal': 'You are normal! Normal villagers '
 villagers = {'Fauna':'You are Fauna! The word "fauna" can also be used to refer to the animals of a specific region, '
                      'habitat, or period. Her phrase is a pun on the words deer and dear. You love being outside'
                      'in nature and breathing in fresh air!'}
-
-print('Would you like to play?')
-response = input()
-while response == 'yes':
-    if response in ('yes','YES','Y','y','Yes'):
-        print('Cool! Lets play.')
-        while True:
-            print('Are you male or female?')
-            gender = input()
-            if gender in ('Female','female','F','f'):
-                print('Cool! You said female.')
-                print('How would your friends describe you?')
-                print('A) Pleasant')
-                print('B) Bubbly')
-                print('C) Uptight')
-                print('D) Sassy')
-                while True:
-                    female1 = input()
-                    if female1 in ('A', 'a'):
-                        print(str(personality.get('Normal', 0)))
-                        print('What is your favorite past time?')
-                        print('A: Walking in nature.')
-                        print('B: Reading a book.')
-                        print('C: Listening to music')
-                        while True:
-                            normal1 = input()
-                            if normal1 in ('A','a'):
-                                print(str(villagers.get('Fauna',0)))
-                            elif normal1 in ('B','b'):
-                                print('You are like Lily the frog!')
-                            elif normal1 in ('C','c'):
-                                print('You are like Marina the Octopus!')
-                    elif female1 in ('B', 'b'):
-                        print(str(personality.get('Peppy', 0)))
-                        sys.exit()
-                    elif female1 in ('C', 'c'):
-                        print('You are Snooty! ')
-                        break
-                    elif female1 in ('D', 'd'):
-                        print('You are Uchi!')
-                        break
-                    else:
-                        print('Please enter A, B, C or D.')
-                        continue
-            elif gender in ('male','Male','m','M'):
-                print('Cool! You said male.')
-                print('What is your favorite pasttime?')
-                print('A) Gossiping')
-                print('B) Exercising')
-                print('C) Sleeping')
-                print('D) Shopping')
-                while True:
-                    male1 = input()
-                    if male1 in ('A','a'):
-                        print('You are Cranky! ')
-                        break
-                    elif male1 in ('B','b'):
-                        print('You are a Jock! ')
-                        break
-                    elif male1 in ('C','c'):
-                        print('You are Lazy! ')
-                        break
-                    elif male1 in ('D','d'):
-                        print('You are Smug!')
-                        break
-                    else:
-                        print('Please enter A, B, C or D.')
-                        continue
-
-
-    elif response in ('no','No','nope','nah','NO'):
+while True:
+    print('Would you like to play?')
+    response = input()
+    if response in ('no','No','nope','nah','NO'):
         print('Okay! Maybe next time.')
-        break
-    else:
-        print('Please enter yes or no.')
-        continue
+        sys.exit()
+    elif response in ('yes','YES','Y','y','Yes'):
+        while response in ('yes','YES','Y','y','Yes'):
+            print('Cool! Lets play.')
+            while True:
+                print('Are you male or female?')
+                gender = input()
+                if gender in ('Female','female','F','f'):
+                    print('Cool! You said female.')
+                    print('How would your friends describe you?')
+                    print('A) Pleasant')
+                    print('B) Bubbly')
+                    print('C) Uptight')
+                    print('D) Sassy')
+                    while True:
+                        female1 = input()
+                        if female1 in ('A', 'a'):
+                            print(str(personality.get('Normal', 0)))
+                            print('What is your favorite past time?')
+                            print('A: Walking in nature.')
+                            print('B: Reading a book.')
+                            print('C: Listening to music')
+                            while True:
+                                normal1 = input()
+                                if normal1 in ('A','a'):
+                                    print(str(villagers.get('Fauna',0)))
+                                elif normal1 in ('B','b'):
+                                    print('You are like Lily the frog!')
+                                elif normal1 in ('C','c'):
+                                    print('You are like Marina the Octopus!')
+                        elif female1 in ('B', 'b'):
+                            print(str(personality.get('Peppy', 0)))
+                            sys.exit()
+                        elif female1 in ('C', 'c'):
+                            print(str(personality.get('Snooty', 0)))
+                            sys.exit()
+                        elif female1 in ('D', 'd'):
+                            print(str(personality.get('Uchi', 0)))
+                            sys.exit()
+                        else:
+                            print('Please enter A, B, C or D.')
+                            continue
+                elif gender in ('male','Male','m','M'):
+                    print('Cool! You said male.')
+                    print('What is your favorite pasttime?')
+                    print('A) Gossiping')
+                    print('B) Exercising')
+                    print('C) Sleeping')
+                    print('D) Shopping')
+                    while True:
+                        male1 = input()
+                        if male1 in ('A','a'):
+                            print(str(personality.get('Cranky', 0)))
+                            sys.exit()
+                        elif male1 in ('B','b'):
+                            print(str(personality.get('Jock', 0)))
+                            sys.exit()
+                        elif male1 in ('C','c'):
+                            print(str(personality.get('Lazy', 0)))
+                            sys.exit()
+                        elif male1 in ('D','d'):
+                            print(str(personality.get('Smug', 0)))
+                            sys.exit()
+                        else:
+                            print('Please enter A, B, C or D.')
+                            continue
+
+
+
+
 
 
 
